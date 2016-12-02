@@ -13,7 +13,7 @@ npm install typed-countries
 yarn add typed-countries
 ```
 
-## Usage
+## Importing
 
 You can import the package with ES6-style imports, or through Node's require:
 
@@ -33,4 +33,38 @@ import countries from "typed-countries";
 
 //Require
 const countries = require("typed-countries").default;
+```
+
+## Usage
+
+The export is an array of country objects, which means you can use all of the usual array operations on the country list:
+
+```js
+import { countries } from "typed-countries";
+
+const usa = countries.find(c => c.iso === "US");
+
+console.log(usa); 
+// {
+//     iso: 'US',
+//     name: 'United States',
+//     hasPostalCodes: true,
+//     states: [
+//         { 
+//             iso: 'AL', 
+//             name: 'Alabama' 
+//         },
+//         ...
+//     ],
+//     zipRegex: "^\\d{5}([\\-]\\d{4})?$"
+// }
+```
+
+If you're using TypeScript, you can also import the Country and State interfaces:
+
+```js
+import { countries, Country, State } from "typed-countries";
+
+const usa: Country = countries.find(c => c.iso === "US");
+const iowa: State = usa.states.find(c => c.iso === "IA");
 ```
