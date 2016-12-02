@@ -2,6 +2,28 @@
 # yarn lockfile v1
 
 
+country-query@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/country-query/-/country-query-0.3.0.tgz#5e268f8f999d1c1463dd56eb29dff50f809f8d52"
+  dependencies:
+    lodash "^3.5.0"
+    lodash-deep "^1.6.0"
+    world-countries "^1.7.8"
+
+lodash-deep@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/lodash-deep/-/lodash-deep-1.6.0.tgz#a7ce672759472b91d12b193c69d8a24a02d8428d"
+  dependencies:
+    lodash ">=2.4.1"
+
+lodash@>=2.4.1, lodash@^3.5.0:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
 typescript@^2.0.10:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.0.10.tgz#ccdd4ed86fd5550a407101a0814012e1b3fac3dd"
+
+world-countries@^1.7.8:
+  version v1.8.1
+  resolved "https://registry.yarnpkg.com/world-countries/-/world-countries-1.8.1.tgz#14ba7d735d422d63de70deb6e35ec5e49341b209"

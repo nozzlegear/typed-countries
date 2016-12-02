@@ -19,10 +19,11 @@ You can import the package with ES6-style imports, or through Node's require:
 
 ```js
 //ES6-style import
-import { countries } from "typed-countries";
+import { countries, regions } from "typed-countries";
 
 //Require
 const countries = require("typed-countries").countries;
+const regions = require("typed-countries").regions;
 ```
 
 This package also uses an ES6-style default export:
@@ -49,6 +50,7 @@ console.log(usa);
 //     iso: 'US',
 //     name: 'United States',
 //     hasPostalCodes: true,
+//     region: "Americas",
 //     states: [
 //         { 
 //             iso: 'AL', 
@@ -60,11 +62,23 @@ console.log(usa);
 // }
 ```
 
-If you're using TypeScript, you can also import the Country and State interfaces:
+This package also contains an simple string array of all 6 regions used in the countries array.
 
 ```js
-import { countries, Country, State } from "typed-countries";
+import { regions } from "typed-countries";
+
+console.log(regions);
+// [ "Asia", "Europe", "Africa", "Oceania", "Americas", "Antarctica" ]
+```
+
+## TypeScript
+
+If you're using TypeScript, you can easily import the Country, Region and State interfaces:
+
+```js
+import { countries, Country, State, Region } from "typed-countries";
 
 const usa: Country = countries.find(c => c.iso === "US");
 const iowa: State = usa.states.find(c => c.iso === "IA");
+const region: Region = usa.region; // "Americas"
 ```

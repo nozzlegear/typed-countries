@@ -1,6 +1,6 @@
 {
   "name": "typed-countries",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "An array of the world's countries, complete with full TypeScript declaration support.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -13,13 +13,17 @@
     "iso",
     "geoip",
     "postal codes",
-    "zip codes"
+    "zip codes",
+    "regions",
+    "continents"
   ],
   "scripts": {
     "prepublish": "npm run build",
-    "build": "./node_modules/.bin/tsc -p ."
+    "build": "./node_modules/.bin/tsc -p .",
+    "map": "npm run build && node ./.tasks/map-regions-to-countries"
   },
   "devDependencies": {
+    "country-query": "^0.3.0",
     "typescript": "^2.0.10"
   }
 }
