@@ -2297,6 +2297,6 @@ export const regions: Region[] = countries.reduce((result, country) => {
     }
 
     return result;
-}, [])
+}, [] as Region[])
 
 export default countries;
