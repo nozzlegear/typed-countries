@@ -18,7 +18,7 @@
     "continents"
   ],
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "build": "./node_modules/.bin/tsc -p .",
     "map": "npm run build && node ./.tasks/map-regions-to-countries"
   },
