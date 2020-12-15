@@ -1346,7 +1346,7 @@ export const countries: Country[] = [
         "name": "Netherlands",
         "hasPostalCodes": true,
         "states": [],
-        "zipRegex": "[0-9]{4} [A-Z]{2}"
+        "zipRegex": "^(\d{4}\s*[A-Z]{2})$"
     },
     {
         "region": "Oceania",
